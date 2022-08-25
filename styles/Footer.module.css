@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    display: flex;
+    padding: 0px 15px;
+    position: relative;
+    justify-content: space-between;
+    background-color: #FFD966;
+}
+
+.footerLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footerLinks ul {
+    list-style: none;
+    align-self: flex-end;
+}
+
+.footerLinks ul li:hover {
+    border-bottom: 2px solid #ff8d66;
+}

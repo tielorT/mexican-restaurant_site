@@ -1,0 +1,37 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-restaurantsite-dev-115648-authRole",
+      "UnauthRoleArn": "arn:aws:iam::544504287652:role/amplify-restaurantsite-dev-115648-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::544504287652:role/amplify-restaurantsite-dev-115648-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-restaurantsite-dev-115648-deployment",
+      "UnauthRoleName": "amplify-restaurantsite-dev-115648-unauthRole",
+      "StackName": "amplify-restaurantsite-dev-115648",
+      "StackId": "arn:aws:cloudformation:us-east-1:544504287652:stack/amplify-restaurantsite-dev-115648/8b63cc90-bf38-11ec-9c77-0e45025342b7",
+      "AmplifyAppId": "d1ie7iez92i64j"
+    },
+    "categories": {
+      "auth": {
+        "restaurantsite9867cbfd": {},
+        "restaurantsiteeebf241c": {}
+      },
+      "storage": {
+        "restaurantsitec6c74113": {
+          "bucketName": "menuimagess",
+          "region": "us-east-1"
+        },
+        "restaurantsite8e31146e": {
+          "bucketName": "menuimagess",
+          "region": "us-east-1"
+        }
+      },
+      "function": {
+        "restaurantsite9867cbfdDefineAuthChallenge": {},
+        "restaurantsite9867cbfdCreateAuthChallenge": {
+          "CHALLENGEANSWER": ""
+        }
+      }
+    }
+  }
+}

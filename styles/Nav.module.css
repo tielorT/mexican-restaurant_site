@@ -1,0 +1,38 @@
+.nav {
+    display: flex;
+    height: 50px;
+    padding: 50px;
+    align-items: center;
+    background: #ffd966;
+    justify-content: flex-start;
+    color: #fff;
+    width: 100%;
+}
+
+
+
+.links {
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.nav ul {
+    list-style: none;
+}
+.nav ul li a  {
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.nav ul li a:hover {
+    color: darkgrey;
+    border-bottom: 1px solid #ff8d66;
+}
+
+.nav ul li a:active {
+    color: darkgrey;
+    border-bottom: 1px solid black;
+}
