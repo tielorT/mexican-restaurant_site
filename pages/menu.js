@@ -19,7 +19,7 @@ export default function Menu({ menuItems }) {
             <div className={styles.header}>
                 <div className={styles.imgHeader}>
                 <div style={{ width: '100%', height:'100%', }}>   
-                  <Image src={img} layout='fill' />
+                  <Image src={img} layout='fill' alt='alt'/>
                 </div>
                 <motion.div className={styles.overlay} initial='hidden' animate='visible' variants={{
                 hidden: {
@@ -92,7 +92,7 @@ export default function Menu({ menuItems }) {
                     </div>
                 </div>
             </div>
-            <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js">
+            <Script id='script-Id' src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js">
             </Script>
         </div>
     )
