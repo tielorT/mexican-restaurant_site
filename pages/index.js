@@ -78,13 +78,15 @@ export default function Home({ menuItems }) {
 
 
 export async function getServerSideProps() {
-  let res = await fetch("http://localhost:3000/api/menu/menuItems", {
+  let res = await fetch(process.env.PROD_URL+"/api/menu/menuItems", {
     method: 'GET',
     headers: {
       "Content-Type": 'application/json'
     }
   });
+
   let menuItems = await res.json();
+
   return {
     props: { menuItems }
   }
