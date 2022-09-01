@@ -19,7 +19,7 @@ export default function Home({ menuItems }) {
         <meta name='keywords' content='restaurant, mexican, mexican food'/>
       </Head>
       <div className={styles.header}>
-          <Image className={styles.img} src={mainImg} layout='fill'/>
+          <Image className={styles.img} src={mainImg} layout='fill' alt='mainImage'/>
               <motion.div className={styles.overlay} initial='hidden' animate='visible' variants={{
                 hidden: {
                   scale: .8,

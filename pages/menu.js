@@ -92,7 +92,7 @@ export default function Menu({ menuItems }) {
                     </div>
                 </div>
             </div>
-            <Script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js">
+            <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js">
             </Script>
         </div>
     )
