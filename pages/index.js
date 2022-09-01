@@ -78,7 +78,7 @@ export default function Home({ menuItems }) {
 
 
 export async function getStaticProps() {
-  let res = await fetch("http://localhost:3000/api/menu/menuItems", {
+  let res = await fetch("http://mexican-restaurant-site-tielort.vercel.app/api/menu/menuItems", {
     method: 'GET',
     headers: {
       "Content-Type": 'application/json'
