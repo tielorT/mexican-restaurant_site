@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import mainImg from '../public/burrito.jpg'
 import salsaImg from '../public/salsa.jpg'
 import inteiorImg from '../public/place.jpg'
@@ -7,7 +8,6 @@ import styles from '../styles/Home.module.css'
 import {motion} from 'framer-motion'
 import Button from '@mui/material/Button'
 import Card from '../components/specialsCard'
-import { fontFamily } from '@mui/system'
 
 
 export default function Home({ menuItems }) {
@@ -46,11 +46,11 @@ export default function Home({ menuItems }) {
           <Button variant='contained' href='/menu' size='large' style={{backgroundColor: '#FFD966', marginTop: '20px'}}>Order Here</Button>
         </div>
         <div className={styles.salsaImg}>
-          <Image src={salsaImg} />
+          <Image src={salsaImg} alt='salsa'/>
         </div>
       </div>
       <div className={styles.subContainer}>
-       <Image src={inteiorImg}/>
+       <Image src={inteiorImg} alt='inteior'/>
        <div className={styles.interiorContent}>
            <h2 style={{fontFamily: 'Hurricane, cursive'}}>19th CENTURY DECOR</h2>
            <p>Come eat in and enjoy our welcoming aesthetics inspired by 19th century spanish design.</p>
@@ -64,11 +64,12 @@ export default function Home({ menuItems }) {
               return <Card title={item.title} 
                            description={item.description}
                            imgUrl={item.imgUrl}
-                           id={item._id}/>
+                           id={item._id}
+                           key={item._id}/>
             }
           })}
           <span style={{flexGrow:'2'}}><h2 style={{textAlign:'center'}}>Check these hot items and more!
-                                                          <br/> <a href='/menu'>See menu here</a></h2></span>
+                                                          <br/> <Link href='/menu'><a>See menu here</a></Link></h2></span>
         </div>
       </div>
     </div>

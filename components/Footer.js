@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <div className={styles.container}>
             <div style={{ width: '15%'}}>
-            <Image src={logo} layout='responsive' />
+            <Image src={logo} layout='responsive' alt='logo'/>
             </div>
             <div className={styles.footerLinks}>
                <div className={styles.links}>

@@ -11,7 +11,7 @@ const specialsCard = ({title, description, imgUrl, id}) => {
     return (
    <Card sx={{ maxWidth: 320 }} style={{margin: '10px'}} key={id}>
            <div style={{position: 'relative', minWidth: '100%', height: '200px'}}>
-               <Image src={imgUrl} layout='fill' />
+               <Image src={imgUrl} layout='fill' alt=''/>
            </div>
        <CardHeader sx={{ color: 'grey'}}
          title={title}
