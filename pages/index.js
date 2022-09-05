@@ -59,7 +59,7 @@ export default function Home({ menuItems }) {
       <div className={styles.subSpContainer}>
         <h2>popular menu items</h2>
         <div className={styles.subSpItems}>
-          {menuItems ? menuItems.data.map(item => {
+          {menuItems.data.map(item => {
             if(item.type === 'special'){
               return <Card title={item.title} 
                            description={item.description}
@@ -67,7 +67,7 @@ export default function Home({ menuItems }) {
                            id={item._id}
                            key={item._id}/>
             }
-          }) : null}
+          })}
           <span style={{flexGrow:'2'}}><h2 style={{textAlign:'center'}}>Check these hot items and more!
                                                           <br/> <Link href='/menu'><a>See menu here</a></Link></h2></span>
         </div>
@@ -78,7 +78,7 @@ export default function Home({ menuItems }) {
 
 
 export async function getStaticProps() {
-  let res = await fetch("http://mexican-restaurant-site-tielort.vercel.app/api/menu/menuItems", {
+  let res = await fetch("/api/menu/menuItems", {
     method: 'GET',
     headers: {
       "Content-Type": 'application/json'
