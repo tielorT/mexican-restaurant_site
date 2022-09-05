@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import mainImg from '../public/burrito.jpg'
 import salsaImg from '../public/salsa.jpg'
 import inteiorImg from '../public/place.jpg'
@@ -10,7 +11,16 @@ import Button from '@mui/material/Button'
 import Card from '../components/specialsCard'
 
 
-export default function Home({ menuItems }) {
+export default function Home({}) {
+  const [menuItems, setMenuItems] = useState(['gg']);
+
+  useEffect(() => {
+    (async () => {
+      const res = await fetch("/api/menu/menuItems");
+      const menuItems = await res.json();
+      setMenuItems(menuItems);
+    })()
+  }, [])
 
   return (
     <div style={{ width: '100%'}}>
@@ -59,7 +69,7 @@ export default function Home({ menuItems }) {
       <div className={styles.subSpContainer}>
         <h2>popular menu items</h2>
         <div className={styles.subSpItems}>
-          {menuItems.data.map(item => {
+          {(menuItems.data || []).map(item => {
             if(item.type === 'special'){
               return <Card title={item.title} 
                            description={item.description}
@@ -77,17 +87,17 @@ export default function Home({ menuItems }) {
 }
 
 
-export async function getStaticProps() {
-  let res = await fetch("/api/menu/menuItems", {
-    method: 'GET',
-    headers: {
-      "Content-Type": 'application/json'
-    }
-  });
+// export async function getStaticProps() {
+//   let res = await fetch("/api/menu/menuItems", {
+//     method: 'GET',
+//     headers: {
+//       "Content-Type": 'application/json'
+//     }
+//   });
 
-  let menuItems = await res.json();
+//   let menuItems = await res.json();
 
-  return {
-    props: { menuItems }
-  }
-}
+//   return {
+//     props: { menuItems }
+//   }
+// }

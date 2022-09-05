@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import styles from '../styles/Menu.module.css'
 import Head from 'next/head'
 import Script from 'next/script'
@@ -7,8 +8,17 @@ import {motion} from 'framer-motion'
 import Card from '../components/menuCard'
 
 
-export default function Menu({ menuItems }) {
-    console.log(menuItems.data)
+export default function Menu({}) {
+    const [menuItems, setMenuItems] = useState(['gg']);
+
+    useEffect(() => {
+        (async () => {
+          const res = await fetch("/api/menu/menuItems");
+          const menuItems = await res.json();
+          setMenuItems(menuItems);
+        })()
+      }, [])
+
     return (
         <div style={{width: '100%'}}>
             <Head>
@@ -49,7 +59,7 @@ export default function Menu({ menuItems }) {
                         <h3>COMBOS</h3>
                         <p>Each combo comes with two sides</p>
                         <div className={styles.menuCard}>
-                            {menuItems.data.map(item => {
+                            {(menuItems.data || []).map(item => {
                                 if(item.type === 'special'){
                                     return <span key={item._id}><Card title={item.title} 
                                                  description={item.description} 
@@ -64,7 +74,7 @@ export default function Menu({ menuItems }) {
                         <h3>BURRITOS</h3>
                         <p>Individual burritos</p>
                         <div className={styles.menuCard}>
-                            {menuItems.data.map(item => {
+                            {(menuItems.data || []).map(item => {
                                 if(item.type === 'burrito'){
                                     return <span key={item._id}><Card title={item.title} 
                                                  description={item.description} 
@@ -79,7 +89,7 @@ export default function Menu({ menuItems }) {
                         <h3>SALADS</h3>
                         <p>Salads prepared witn fresh ingredients</p>
                         <div className={styles.menuCard}>
-                            {menuItems.data.map(item => {
+                            {(menuItems.data || []).map(item => {
                                 if(item.type === 'salad'){
                                     return <span key={item._id}><Card title={item.title} 
                                                  description={item.description} 
@@ -98,16 +108,3 @@ export default function Menu({ menuItems }) {
     )
 }
 
-
-export async function getServerSideProps() {
-    let res = await fetch("http://localhost:3000/api/menu/menuItems", {
-      method: 'GET',
-      headers: {
-        "Content-Type": 'application/json'
-      }
-    });
-    let menuItems = await res.json();
-    return {
-      props: { menuItems }
-    }
-  }
