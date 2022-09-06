@@ -14,6 +14,8 @@ import Card from '../components/specialsCard'
 export default function Home({}) {
   const [menuItems, setMenuItems] = useState(['gg']);
 
+  console.log(process.env.MONGODB_URI)
+
   useEffect(() => {
     (async () => {
       const res = await fetch("/api/menu/menuItems");
