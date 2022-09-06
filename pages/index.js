@@ -12,9 +12,8 @@ import Card from '../components/specialsCard'
 
 
 export default function Home({}) {
-  const [menuItems, setMenuItems] = useState(['gg']);
+  const [menuItems, setMenuItems] = useState([]);
 
-  console.log(process.env.MONGODB_URI)
 
   useEffect(() => {
     (async () => {
