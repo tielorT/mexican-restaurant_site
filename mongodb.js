@@ -6,6 +6,8 @@ const options = {
   useNewUrlParser: true,
 }
 
+console.log(process.env.MONGODB_URI)
+
 let client
 let clientPromise
 
