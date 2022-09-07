@@ -98,8 +98,6 @@ export default function Menu({}) {
                     </div>
                 </div>
             </div>
-            <Script id='script-Id' src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js">
-            </Script>
         </div>
     )
 }
