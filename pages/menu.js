@@ -21,11 +21,7 @@ export default function Menu({}) {
 
     return (
         <div style={{width: '100%'}}>
-            <Head>
-                <link rel="preconnect" href="https://app.snipcart.com" />
-                <link rel="preconnect" href="https://cdn.snipcart.com" />
-                <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.21/default/snipcart.css" />   
-            </Head>
+            
             <div className={styles.header}>
                 <div className={styles.imgHeader}>
                 <div style={{ width: '100%', height:'100%', }}>   
