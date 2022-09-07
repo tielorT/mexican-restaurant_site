@@ -21,7 +21,7 @@ const menuCard = ({title, description, price, imgUrl, id}) => {
            <Button style={{padding: '0px', color: '#FF9378',fontWeight: 'bold'}}
                    className='snipcart-add-item'
                    data-item-id={title}
-                   data-item-url={'mexican-restaurant-site.vercel.app/menu'}
+                   data-item-url={'https://mexican-restaurant-site.vercel.app/menu'}
                    data-item-price={price}
                    data-item-description={description}
                    data-item-image={imgUrl}
