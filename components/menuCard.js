@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 
 
-const menuCard = ({title, description, price, imgUrl, id}) => {
+const menuCard = ({title, description, price, imgUrl, id, url}) => {
 
     return (
    <Card sx={{ maxWidth: 320 }} style={{margin: '10px'}} key={id}>
@@ -20,8 +20,8 @@ const menuCard = ({title, description, price, imgUrl, id}) => {
            <span>${price}</span><br/>
            <Button style={{padding: '0px', color: '#FF9378',fontWeight: 'bold'}}
                    className='snipcart-add-item'
-                   data-item-id={title}
-                   data-item-url={'https://mexican-restaurant-site.vercel.app/menu'}
+                   data-item-id={id}
+                   data-item-url={url}
                    data-item-price={price}
                    data-item-description={description}
                    data-item-image={imgUrl}
