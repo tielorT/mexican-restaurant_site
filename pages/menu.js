@@ -57,11 +57,11 @@ export default function Menu({}) {
                         <div className={styles.menuCard}>
                             {(menuItems.data || []).map(item => {
                                 if(item.type === 'special'){
-                                    return <span key={item._id}><Card title={item.title} 
+                                    return <span key={item.id}><Card title={item.title} 
                                                  description={item.description} 
                                                  price={item.price} 
                                                  imgUrl={item.imgUrl}
-                                                 key={item._id}/></span>
+                                                 key={item.id}/></span>
                                 }
                             })}
                         </div>
@@ -72,11 +72,11 @@ export default function Menu({}) {
                         <div className={styles.menuCard}>
                             {(menuItems.data || []).map(item => {
                                 if(item.type === 'burrito'){
-                                    return <span key={item._id}><Card title={item.title} 
+                                    return <span key={item.id}><Card title={item.title} 
                                                  description={item.description} 
                                                  price={item.price} 
                                                  imgUrl={item.imgUrl}
-                                                 key={item._id}/></span> 
+                                                 key={item.id}/></span> 
                                 }
                             })}
                         </div>
@@ -87,11 +87,11 @@ export default function Menu({}) {
                         <div className={styles.menuCard}>
                             {(menuItems.data || []).map(item => {
                                 if(item.type === 'salad'){
-                                    return <span key={item._id}><Card title={item.title} 
+                                    return <span key={item.id}><Card title={item.title} 
                                                  description={item.description} 
                                                  price={item.price} 
                                                  imgUrl={item.imgUrl}
-                                                 key={item._id}/></span>
+                                                 key={item.id}/></span>
                                 }
                             })}
                         </div>
