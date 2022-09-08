@@ -75,8 +75,8 @@ export default function Home({}) {
               return <Card title={item.title} 
                            description={item.description}
                            imgUrl={item.imgUrl}
-                           id={item._id}
-                           key={item._id}/>
+                           id={item.id}
+                           key={item.id}/>
             }
           })}
           <span style={{flexGrow:'2'}}><h2 style={{textAlign:'center'}}>Check these hot items and more!
