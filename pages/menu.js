@@ -55,7 +55,7 @@ export default function Menu({}) {
                         <h3>COMBOS</h3>
                         <p>Each combo comes with two sides</p>
                         <div className={styles.menuCard}>
-                            {(menuItems.data || []).map(item => {
+                            {(menuItems || []).map(item => {
                                 if(item.type === 'special'){
                                     return <span key={item.id}><Card title={item.title} 
                                                  description={item.description} 
@@ -70,7 +70,7 @@ export default function Menu({}) {
                         <h3>BURRITOS</h3>
                         <p>Individual burritos</p>
                         <div className={styles.menuCard}>
-                            {(menuItems.data || []).map(item => {
+                            {(menuItems || []).map(item => {
                                 if(item.type === 'burrito'){
                                     return <span key={item.id}><Card title={item.title} 
                                                  description={item.description} 
@@ -86,7 +86,7 @@ export default function Menu({}) {
                         <h3>SALADS</h3>
                         <p>Salads prepared witn fresh ingredients</p>
                         <div className={styles.menuCard}>
-                            {(menuItems.data || []).map(item => {
+                            {(menuItems || []).map(item => {
                                 if(item.type === 'salad'){
                                     return <span key={item.id}><Card title={item.title} 
                                                  description={item.description} 
