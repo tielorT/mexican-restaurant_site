@@ -74,7 +74,7 @@ export default function Menu({}) {
                                 if(item.type === 'burrito'){
                                     return <span key={item.id}><Card title={item.title} 
                                                  description={item.description} 
-                                                 id={id}
+                                                 id={item.id}
                                                  price={item.price} 
                                                  imgUrl={item.imgUrl}
                                                  key={item.id}/></span> 
