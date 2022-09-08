@@ -6,5 +6,5 @@ export default async function handler(req, res) {
         const { itemId } = req.query
         
       const menu = await db.collection("menuItems").find({id: itemId}).toArray();
-      res.status(200).json({data: menu });
+      res.status(200).json(menu);
 }
