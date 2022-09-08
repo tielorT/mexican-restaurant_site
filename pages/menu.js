@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import styles from '../styles/Menu.module.css'
-import Head from 'next/head'
-import Script from 'next/script'
 import img from '../public/menuImage.jpg'
 import {motion} from 'framer-motion'
 import Card from '../components/menuCard'
@@ -58,6 +56,7 @@ export default function Menu({}) {
                             {(menuItems || []).map(item => {
                                 if(item.type === 'special'){
                                     return <span key={item.id}><Card title={item.title} 
+                                                 url={item.url}
                                                  description={item.description} 
                                                  price={item.price} 
                                                  imgUrl={item.imgUrl}
@@ -73,6 +72,7 @@ export default function Menu({}) {
                             {(menuItems || []).map(item => {
                                 if(item.type === 'burrito'){
                                     return <span key={item.id}><Card title={item.title} 
+                                                 url={item.url}
                                                  description={item.description} 
                                                  id={item.id}
                                                  price={item.price} 
@@ -89,6 +89,7 @@ export default function Menu({}) {
                             {(menuItems || []).map(item => {
                                 if(item.type === 'salad'){
                                     return <span key={item.id}><Card title={item.title} 
+                                                 url={item.url}
                                                  description={item.description} 
                                                  price={item.price} 
                                                  imgUrl={item.imgUrl}
