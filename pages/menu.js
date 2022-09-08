@@ -57,7 +57,8 @@ export default function Menu({}) {
                                 if(item.type === 'special'){
                                     return <span key={item.id}><Card title={item.title} 
                                                  url={item.url}
-                                                 description={item.description} 
+                                                 description={item.description}
+                                                 id={item.id} 
                                                  price={item.price} 
                                                  imgUrl={item.imgUrl}
                                                  key={item.id}/></span>
@@ -90,7 +91,8 @@ export default function Menu({}) {
                                 if(item.type === 'salad'){
                                     return <span key={item.id}><Card title={item.title} 
                                                  url={item.url}
-                                                 description={item.description} 
+                                                 description={item.description}
+                                                 id={item.id} 
                                                  price={item.price} 
                                                  imgUrl={item.imgUrl}
                                                  key={item.id}/></span>
