@@ -9,7 +9,7 @@ import Card from '../components/menuCard'
 
 
 export default function Menu({}) {
-    const [menuItems, setMenuItems] = useState(['gg']);
+    const [menuItems, setMenuItems] = useState([]);
 
     useEffect(() => {
         (async () => {

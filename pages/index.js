@@ -70,7 +70,7 @@ export default function Home({}) {
       <div className={styles.subSpContainer}>
         <h2>popular menu items</h2>
         <div className={styles.subSpItems}>
-          {(menuItems.data || []).map(item => {
+          {(menuItems || []).map(item => {
             if(item.type === 'special'){
               return <Card title={item.title} 
                            description={item.description}
