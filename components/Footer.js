@@ -14,17 +14,17 @@ const Footer = () => {
                <div className={styles.links}>
                     <ul>
                         <li>
-                            <Link href='/'>Email</Link>
+                            <Link href='tielorboon@gmail.com'>Email</Link>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <Link href='/'>Linkdin</Link>
+                            <Link href='https://www.linkedin.com/in/tielor-tomlinson-29742624b/'>Linkdin</Link>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <Link href='/'>Contact</Link>
+                            <Link href='https://github.com/tielorT?tab=repositories'>GitHub</Link>
                         </li>
                     </ul>
                </div>

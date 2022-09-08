@@ -88,17 +88,3 @@ export default function Home({}) {
 }
 
 
-// export async function getStaticProps() {
-//   let res = await fetch("/api/menu/menuItems", {
-//     method: 'GET',
-//     headers: {
-//       "Content-Type": 'application/json'
-//     }
-//   });
-
-//   let menuItems = await res.json();
-
-//   return {
-//     props: { menuItems }
-//   }
-// }
